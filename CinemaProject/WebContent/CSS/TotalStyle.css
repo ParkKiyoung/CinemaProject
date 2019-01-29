@@ -1,0 +1,193 @@
+<Style>
+.entire {
+	width : 100%;
+	margin : 0 auto;
+}
+body {
+	background-color : white;
+	margin-top: 0px;
+}
+#LoadMain{
+	width : 100%;
+	margin : 0 auto;
+	background-color: white;
+}
+.ViewEntire{
+	margin-left : 10%;
+	margin-right: 10%;
+}
+a:link{
+	color : black;
+	text-decoration : none;
+}
+a:visited{
+	color : black;
+	text-decoration : none;
+}
+a:hover{
+	color : #ff382e;
+	text-decoration : none;
+}
+#CinemaView ul li{
+	display : inline;
+	font-weight : bolder;
+	font-size : 15px;
+	list-style-type : none;
+	list-style : none;
+	padding : 5px;
+	padding-left : 10px; 
+}
+#CinemaView{
+	background-color : #222222;
+}
+#CinemaView_Menu{
+	background-color : #333333; 
+	border : 1px solid black;
+	font-size: 8px;
+}
+#Plus_Content {
+	color : #CCCCCC;
+}
+
+#Plus_Content:hover{
+	color : #ff382e;
+}
+#Movies1{
+	color : #CCCCCC;
+}
+#Movies2{
+	color : #CCCCCC;
+}
+#Movies3{
+	color : #CCCCCC;
+}
+#Movies4{
+	color : #CCCCCC;
+}
+#Movies5{
+	color : #CCCCCC;
+}
+#Movies1:hover{
+	color : #ff382e;
+}
+#Movies2:hover{
+	color : #ff382e;
+}
+#Movies3:hover{
+	color : #ff382e;
+}
+#Movies4:hover{
+	color : #ff382e;
+}
+#Movies5:hover{
+	color : #ff382e;
+}
+.Grade_Movie_Title:link{
+	font-size : 14px;
+	color : #ff382e;
+}
+.Grade_Movie_Title:visited{
+	font-size : 14px;
+	color : #ff382e;
+}
+.Grade_Movie_Title:hover{
+	font-size : 14px;
+	color : #ff382e;
+	text-decoration : underline;
+}
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #CCCCCC;
+    margin: 1em 0;
+    padding: 0; 
+}
+input[id="SearchBar"]{
+	height : 20px;
+	width : 500px;
+	font-size : 15pt;
+}
+#SearchBtn {
+	-moz-box-shadow:inset 0px 1px 0px 0px #8a8a8a;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #8a8a8a;
+	box-shadow:inset 0px 1px 0px 0px #8a8a8a;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #000000), color-stop(1, #474647));
+	background:-moz-linear-gradient(top, #000000 5%, #474647 100%);
+	background:-webkit-linear-gradient(top, #000000 5%, #474647 100%);
+	background:-o-linear-gradient(top, #000000 5%, #474647 100%);
+	background:-ms-linear-gradient(top, #000000 5%, #474647 100%);
+	background:linear-gradient(to bottom, #000000 5%, #474647 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#474647',GradientType=0);
+	background-color:#000000;
+	border:1px solid #6b6b6b;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:4px 24px;
+	padding-bottom:5px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #000000;
+}
+#SearchBtn:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #474647), color-stop(1, #000000));
+	background:-moz-linear-gradient(top, #474647 5%, #000000 100%);
+	background:-webkit-linear-gradient(top, #474647 5%, #000000 100%);
+	background:-o-linear-gradient(top, #474647 5%, #000000 100%);
+	background:-ms-linear-gradient(top, #474647 5%, #000000 100%);
+	background:linear-gradient(to bottom, #474647 5%, #000000 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#474647', endColorstr='#000000',GradientType=0);
+	background-color:#474647;
+}
+#SearchBtn:active {
+	position:relative;
+	top:1px;
+}
+.Content_Total{
+	background-color : white;
+	margin-left : 15%;
+	margin-right : 15%;
+}
+.Grade_Select_Movie{
+	width : 100%;
+	text-align : center;
+	border : 4px solid #888888;
+	background-color : #EEEEEE;
+}
+
+.Grade_View_List_Table{
+	width : 100%;
+	border-top : 1px solid #CCCCCC;
+	border-collapse : collapse; 
+}
+.Grade_View_List_Table #GVL_Td, #GVL_Th{
+	border-bottom : 1px solid #CCCCCC;
+	padding : 10px;
+}
+.Grade_View_Menu .GVM_ul{
+	list-style : none;
+}
+.Grade_View_Menu .GVM_li{
+	display : inline-block;
+	text-align : left;
+}
+.S_B_Grade{
+	
+}
+.B_Grade{
+	
+}
+.S_A_Grade{
+	
+}
+.A_Grade{
+	
+}
+.Include_Area{
+		display : inline-block;
+		text-align : center;
+}
+</Style>
