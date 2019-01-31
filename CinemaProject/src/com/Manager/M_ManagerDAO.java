@@ -30,7 +30,7 @@ public class M_ManagerDAO {
 		return ds.getConnection();
 	}
 
-	// �깉 �쁺�솕 �엯�젰
+	// 占쎄퉱 占쎌겫占쎌넅 占쎌뿯占쎌젾
 	public void MovieInsert(MovieBean bean) {
 		Connection con = null;
 		PreparedStatement ps = null;
@@ -55,7 +55,7 @@ public class M_ManagerDAO {
 		}
 	}
 
-	// �닔�젙�븷 �쁺�솕 由ъ뒪�듃 蹂닿린
+	// 占쎈땾占쎌젟占쎈막 占쎌겫占쎌넅 �뵳�딅뮞占쎈뱜 癰귣떯由�
 	public ArrayList<MovieBean> MovieCallList(int startRow, int endRow) {
 		Connection con = null;
 		PreparedStatement ps = null;
@@ -96,7 +96,7 @@ public class M_ManagerDAO {
 		return arr;
 	}
 
-	// �럹�씠吏� - �쁺�솕 媛��닔 移댁슫�듃
+	// 占쎈읂占쎌뵠筌욑옙 - 占쎌겫占쎌넅 揶쏉옙占쎈땾 燁삳똻�뒲占쎈뱜
 	public int MovieListCount() {
 		Connection con = null;
 		Statement st = null;
@@ -120,7 +120,7 @@ public class M_ManagerDAO {
 		return count;
 	}
 
-	// �닔�젙�븷 �쁺�솕 �뜲�씠�꽣 遺덈윭�삤湲�
+	// 占쎈땾占쎌젟占쎈막 占쎌겫占쎌넅 占쎈쑓占쎌뵠占쎄숲 �겫�뜄�쑎占쎌궎疫뀐옙
 	public MovieBean MovieCallData(int movienum) {
 		Connection con = null;
 		Statement st = null;
@@ -155,7 +155,7 @@ public class M_ManagerDAO {
 		return bean;
 	}
 
-	// �쁺�솕 �닔�젙 �엯�젰�븯湲�
+	// 占쎌겫占쎌넅 占쎈땾占쎌젟 占쎌뿯占쎌젾占쎈릭疫뀐옙
 	public void MovieUpdate(MovieBean bean) {
 		Connection con = null;
 		PreparedStatement ps = null;
@@ -181,7 +181,7 @@ public class M_ManagerDAO {
 		}
 	}
 
-	// �쁺�솕 �궘�젣�븯湲�
+	// 占쎌겫占쎌넅 占쎄텣占쎌젫占쎈릭疫뀐옙
 	public void MovieDelete(int movienum) {
 		Connection con = null;
 		Statement st = null;
@@ -197,7 +197,7 @@ public class M_ManagerDAO {
 		}
 	}
 
-	// 吏��굹媛� �쁺�솕 由ъ뒪�듃 蹂닿린 + 寃��깋
+	// 筌욑옙占쎄돌揶쏉옙 占쎌겫占쎌넅 �뵳�딅뮞占쎈뱜 癰귣떯由� + 野껓옙占쎄퉳
 	public ArrayList<MovieBean> MovieCallHistory(String word, String field) {
 		Connection con = null;
 		PreparedStatement ps = null;
@@ -209,7 +209,7 @@ public class M_ManagerDAO {
 			if (word == "")
 				sql = "select * from movie mv, (select movienum ,max(outdate) max_date from theater_Date group by movienum)dd where mv.movie_num = dd.movienum and mv.rel_date<=sysdate and max_date<=sysdate order by rel_date desc";
 			else
-				sql = "select * from movie mv, (select movienum ,max(outdate) max_date from theater_Date group by movienum)dd where mv.movie_num = dd.movienum and mv.rel_date<=sysdate and max_date<=sysdate and mv."
+				sql = "select * from movie mv, (select movienum ,max(outdate) max_date from theater_Date group by movienum)dd where mv.movie_num = dd.movienum and mv.rel_date<=sysdate and max_date<=sysdate and "
 						+ field + " like '%" + word + "%' order by rel_date desc";
 			ps = con.prepareStatement(sql);
 			rs = ps.executeQuery();
@@ -238,7 +238,7 @@ public class M_ManagerDAO {
 		return arr;
 	}
 
-	// 상영 예정작 리스트
+	// �긽�쁺 �삁�젙�옉 由ъ뒪�듃
 	public ArrayList<MovieBean> MovieCallPlan(int startRow, int endRow) {
 		Connection con = null;
 		PreparedStatement ps = null;
@@ -275,7 +275,7 @@ public class M_ManagerDAO {
 		return arr;
 	}
 
-	// 상영 예정작 갯수
+	// �긽�쁺 �삁�젙�옉 媛��닔
 	public int MoviePlanCount() {
 		Connection con = null;
 		Statement st = null;

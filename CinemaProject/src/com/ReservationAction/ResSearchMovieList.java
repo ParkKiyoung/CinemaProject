@@ -37,20 +37,6 @@ public class ResSearchMovieList extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("utf-8");
 		String theater = request.getParameter("theater");
-/*		String year = request.getParameter("year");
-		String month = "";
-		if(Integer.parseInt(request.getParameter("month"))<10) {
-			month = "0"+request.getParameter("month");
-		}else{
-			month = request.getParameter("month");
-		};
-		String day = "";
-		if(Integer.parseInt(request.getParameter("day"))<10){
-			day= "0"+request.getParameter("day");
-		}else{
-			day = request.getParameter("day");	
-		};
-		String resDate = year+month+day;*/
 		String resDate = request.getParameter("resDate");
 		
 		

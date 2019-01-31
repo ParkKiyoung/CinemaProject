@@ -63,7 +63,7 @@ public class ResConfirmAction extends HttpServlet {
 		
 		response.setContentType("text/html;charset=utf-8");
 		PrintWriter out = response.getWriter();
-		out.println("<script>alert('예약이 완료 되어습니다.');location.href=../Main/MainHome.jsp</script>");
+		out.println("<script>alert('예약이 완료 되었습니다.');location.href='../Main/MainHome.jsp'</script>");
 		
 		
 	}

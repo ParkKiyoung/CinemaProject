@@ -16,6 +16,7 @@
 	function movieSearch(){
 		$("#Manager_Header").load("M_CallHistory.do", {
 			"word" : $("#word").val(),
+			"field" : $("#field").val(),
 		}, function(data) {
 			$("#Main_Body").html(data)
 		});

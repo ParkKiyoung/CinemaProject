@@ -104,14 +104,14 @@ public class ReservationDAO {
 			String sql = "select room_name,room_num,m.subject,ontime,m.movie_num,tt.theater_time_num, rank()over (partition by m.movie_num order by ontime) "+ 
 					"from room r, theater t, theater_date td, theater_time tt, movie m "+ 
 					"where r.theaternum=t.theater_num and tt.movienum=m.movie_num and tt.roomnum=r.room_num and td.movienum=m.movie_num and "+ 
-					"t.theater_num="+theater+" and to_date('"+resDate+"','yyyy-mm-dd')<td.outdate ";
+					"t.theater_num="+theater+" and to_date('"+resDate+"','yyyy-mm-dd')= tt.moviedate ";
 			st = con.createStatement();
 			rs = st.executeQuery(sql);
 			while(rs.next()) {
 				ReservationBean rb = new ReservationBean();
 				rb.setTheaterTimeNum(rs.getInt("theater_time_num"));
-				rb.setRoom_Name(rs.getString("ROOM_NAME"));//�󿵰� �̸�
-				rb.setRoomNum(rs.getInt("ROOM_NUM"));//�󿵰� ��ȣ
+				rb.setRoom_Name(rs.getString("ROOM_NAME"));//占쏢영곤옙 占싱몌옙
+				rb.setRoomNum(rs.getInt("ROOM_NUM"));//占쏢영곤옙 占쏙옙호
 				rb.setMovieSubject(rs.getString("subject"));
 				rb.setOnTime(rs.getString("ontime"));
 				rb.setMovieNum(rs.getInt("movie_num"));
@@ -175,12 +175,12 @@ public class ReservationDAO {
 		}
 		return rb;
 	}
-	public void InsertReservation(ReservationBean rb) {//�������� ���
+	public void InsertReservation(ReservationBean rb) {//占쏙옙占쏙옙占쏙옙占쏙옙 占쏙옙占�
 		Connection con = null;
 		PreparedStatement ps = null;
 		try {
 			con = getConnection();
-			String sql = "insert into booking values(booking_seq.nextval,?,?,?,?,?,?,sysdate,?,?)";
+			String sql = "insert into booking values(booking_seq.nextval,?,?,?,?,?,?,to_date(sysdate,'yyyy-mm-dd hh24:mi:ss'),?,?)";
 			ps = con.prepareStatement(sql);
 			ps.setInt(1, rb.getMemberNum());
 			ps.setString(2, rb.getResSeat());

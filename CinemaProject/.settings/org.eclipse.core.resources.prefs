@@ -1,4 +1,7 @@
 eclipse.preferences.version=1
 encoding//src/com/LoginAction/LoginAction.java=UTF-8
+encoding//src/com/Manager/M_ManagerDAO.java=UTF-8
 encoding//src/com/Manager/U_ManagerDAO.java=UTF-8
+encoding//src/com/Member/MemberDAO.java=UTF-8
 encoding//src/com/Movie/MovieDAO.java=UTF-8
+encoding//src/com/Reservation/ReservationDAO.java=UTF-8

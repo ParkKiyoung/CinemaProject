@@ -34,7 +34,7 @@ public class MemberDAO {
 		return ds.getConnection();
 		}
 	
-	//�뜝�럥�맶�뜝�럥吏쀥뜝�럩援꿨뜝�럥�맶�뜝�럥堉볟뜝�럥荑덂뜝�럩援� �뜝�럥�맶�뜝�럥�넰占쎈눀占쎈튂占쎄뎡 �뜝�럥�맶�뜝�럥堉묈뜝�럡�븫�뜝�럩援�
+	//占쎈쐻占쎈윥占쎈㎍占쎈쐻占쎈윥筌욎�λ쐻占쎈윪�뤃轅⑤쐻占쎈윥占쎈㎍占쎈쐻占쎈윥�젆蹂잙쐻占쎈윥�뜎�뛼�쐻占쎈윪�뤃占� 占쎈쐻占쎈윥占쎈㎍占쎈쐻占쎈윥占쎈꽣�뜝�럥���뜝�럥�뒄�뜝�럡�렊 占쎈쐻占쎈윥占쎈㎍占쎈쐻占쎈윥�젆臾덈쐻占쎈윞占쎈릊占쎈쐻占쎈윪�뤃占�
 	public int IdCheck(String userid) {
 		Connection con = null;
 		Statement st = null;
@@ -46,7 +46,7 @@ public class MemberDAO {
 			st = con.createStatement();
 			rs = st.executeQuery(sql);
 			if(rs.next()) {
-				flag=1;//�뜝�럥�맶�뜝�럥�넰占쎈눀占쎈튂占쎄뎡
+				flag=1;//占쎈쐻占쎈윥占쎈㎍占쎈쐻占쎈윥占쎈꽣�뜝�럥���뜝�럥�뒄�뜝�럡�렊
 				return flag;
 			}
 			
@@ -86,7 +86,7 @@ public class MemberDAO {
 		}
 		
 	}
-	//�뜝�럩�뤂�뜝�럥�맶�뜝�럥吏쀥뜝�럩援꿨뜝�럥�맶�뜝�럥吏쀥뜝�럩援꿨뜝�럥�맶�뜝�럥吏쀥뜝�럩援�
+	//占쎈쐻占쎈윪占쎈쨧占쎈쐻占쎈윥占쎈㎍占쎈쐻占쎈윥筌욎�λ쐻占쎈윪�뤃轅⑤쐻占쎈윥占쎈㎍占쎈쐻占쎈윥筌욎�λ쐻占쎈윪�뤃轅⑤쐻占쎈윥占쎈㎍占쎈쐻占쎈윥筌욎�λ쐻占쎈윪�뤃占�
 	public void MemberJoin(MemberBean mb) {
 		Connection con = null;
 		PreparedStatement ps = null;
@@ -117,7 +117,7 @@ public class MemberDAO {
 		
 	}
 
-	//�뜝�럥�맶�뜝�럥吏쀥뜝�럩援꿨뜝�럥�맶�뜝�럥吏쀥뜝�럩援� �뜝�럥�맶�뜝�럥吏쀥뜝�럩援꿨뜝�럩源� �뜝�럥�맶�뜝�럥堉묈뜝�럡�븫�뜝�럩援�
+	//占쎈쐻占쎈윥占쎈㎍占쎈쐻占쎈윥筌욎�λ쐻占쎈윪�뤃轅⑤쐻占쎈윥占쎈㎍占쎈쐻占쎈윥筌욎�λ쐻占쎈윪�뤃占� 占쎈쐻占쎈윥占쎈㎍占쎈쐻占쎈윥筌욎�λ쐻占쎈윪�뤃轅⑤쐻占쎈윪繹먲옙 占쎈쐻占쎈윥占쎈㎍占쎈쐻占쎈윥�젆臾덈쐻占쎈윞占쎈릊占쎈쐻占쎈윪�뤃占�
 	public ArrayList<ZipcodeBEAN> zipSearch(String dong) {
 		Connection con = null;
 		Statement st =null;
@@ -144,7 +144,7 @@ public class MemberDAO {
 		}
 		return arr;
 	}
-	public int MemberLogin(String id, String password) {//�뜝�럥�맶�뜝�럥堉®뭐癒��뵰占쎄뎡�뜝�럥�맶�뜝�럥吏쀥뜝�럩援�
+	public int MemberLogin(String id, String password) {//占쎈쐻占쎈윥占쎈㎍占쎈쐻占쎈윥�젆짰萸먪솒占쏙옙逾겼뜝�럡�렊占쎈쐻占쎈윥占쎈㎍占쎈쐻占쎈윥筌욎�λ쐻占쎈윪�뤃占�
 		Connection con = null;
 		Statement st = null;
 		ResultSet rs = null;
@@ -167,7 +167,7 @@ public class MemberDAO {
 		}
 		return flag;
 	}
-	public MemberBean getMember(String id) {//�뜝�럩�뤂�뜝�럥�맶�뜝�럥吏쀥뜝�럩援꿨뜝�럥�맶�뜝�럥吏쀥뜝�럩援꿨뜝�럥�맶�뜝�럥吏쀥뜝�럩援� �뜝�럥�맶�뜝�럥吏쀥뜝�럩援꿨뜝�럥�맶�뜝�럥吏쀥뜝�럩援꿨뜝�럥�맶�뜝�럥吏쀥뜝�럩援꿨뜝�럥�맶�뜝�럥吏쀥뜝�럩援� �뜝�럥�맶�뜝�럥吏쀥뜝�럩援꿨뜝�럥�맶占쎈쐻�뜝占�
+	public MemberBean getMember(String id) {//占쎈쐻占쎈윪占쎈쨧占쎈쐻占쎈윥占쎈㎍占쎈쐻占쎈윥筌욎�λ쐻占쎈윪�뤃轅⑤쐻占쎈윥占쎈㎍占쎈쐻占쎈윥筌욎�λ쐻占쎈윪�뤃轅⑤쐻占쎈윥占쎈㎍占쎈쐻占쎈윥筌욎�λ쐻占쎈윪�뤃占� 占쎈쐻占쎈윥占쎈㎍占쎈쐻占쎈윥筌욎�λ쐻占쎈윪�뤃轅⑤쐻占쎈윥占쎈㎍占쎈쐻占쎈윥筌욎�λ쐻占쎈윪�뤃轅⑤쐻占쎈윥占쎈㎍占쎈쐻占쎈윥筌욎�λ쐻占쎈윪�뤃轅⑤쐻占쎈윥占쎈㎍占쎈쐻占쎈윥筌욎�λ쐻占쎈윪�뤃占� 占쎈쐻占쎈윥占쎈㎍占쎈쐻占쎈윥筌욎�λ쐻占쎈윪�뤃轅⑤쐻占쎈윥占쎈㎍�뜝�럥�맶占쎈쐻�뜝占�
 		Connection con = null;
 		Statement st = null;
 		ResultSet rs = null;
@@ -244,7 +244,7 @@ public class MemberDAO {
 		}
 		return arr;
 	}
-	//�뜝�럩�뤂�뜝�럩�쐸�뜝�럩�젧�솻洹⑥삕  �뜝�럥�빢�뜝�럩�젧
+	//占쎈쐻占쎈윪占쎈쨧占쎈쐻占쎈윪占쎌맱占쎈쐻占쎈윪占쎌젳占쎌녃域밟뫁�굲  占쎈쐻占쎈윥占쎈묄占쎈쐻占쎈윪占쎌젳
 	public void MemberUpdate(MemberBean mb) {
 		Connection con = null;
 		PreparedStatement ps =null;
@@ -271,12 +271,12 @@ public class MemberDAO {
 		}
 		
 	}
-	public int MemberDelete(MemberBean mb) {//�뜝�럩�뤂�뜝�럩�쐸�뜝�럡�돮�뜝�럥�떄
+	public int MemberDelete(MemberBean mb) {//占쎈쐻占쎈윪占쎈쨧占쎈쐻占쎈윪占쎌맱占쎈쐻占쎈윞占쎈룼占쎈쐻占쎈윥占쎈뻹
 		Connection con = null;
 		Statement st = null;
 		ResultSet rs = null;
 		String sql = "";
-		int res = 0;//占쎈쑏熬곣뫁�벐 占쎄껀占쎈쐠占쎈뎄�뇖�궪�삕
+		int res = 0;//�뜝�럥�몡�넭怨ｋ쳛占쎈쾺 �뜝�럡猿��뜝�럥�맆�뜝�럥�럡占쎈뇲占쎄땔占쎌굲
 		try {
 			con = getConnection();
 			 sql ="select * from member where member_num = "+mb.getNum();
@@ -284,7 +284,7 @@ public class MemberDAO {
 			rs = st.executeQuery(sql);
 			if(rs.next()) {
 				if(mb.getPassword().equals(rs.getString("password"))) {
-					//占쎈쑏熬곣뫁�벐 �뜝�럩逾х뇖�궪�삕
+					//�뜝�럥�몡�넭怨ｋ쳛占쎈쾺 占쎈쐻占쎈윪�앗낅뇲占쎄땔占쎌굲
 					sql ="delete member where member_num="+mb.getNum();
 					st.execute(sql);
 					res = 1;
@@ -395,7 +395,7 @@ public class MemberDAO {
 		}
 		return gcnt;
 	}
-	public MemberBean FindId(MemberBean mb) {//占쎈툡占쎌뵠占쎈탵 筌≪뼐由�
+	public MemberBean FindId(MemberBean mb) {//�뜝�럥�닡�뜝�럩逾졾뜝�럥�꺏 嶺뚢돦堉먪뵳占�
 		Connection con = null;
 		PreparedStatement ps = null;
 		ResultSet rs = null;
@@ -420,8 +420,8 @@ public class MemberDAO {
 		findMb.setUserid("null");
 		return findMb;
 	}
-	public MemberBean FindPwd(MemberBean mb) {//�뜮袁⑥쓰 筌≪뼐由�
-		//�뜮袁⑥쓰 占쎌뵬燁삼옙 1, �겫�뜆�뵬燁삼옙 0
+	public MemberBean FindPwd(MemberBean mb) {//占쎈쑏熬곣뫁�벐 嶺뚢돦堉먪뵳占�
+		//占쎈쑏熬곣뫁�벐 �뜝�럩逾х뇖�궪�삕 1, 占쎄껀占쎈쐠占쎈뎄�뇖�궪�삕 0
 		Connection con = null;
 		PreparedStatement ps = null;
 		ResultSet rs = null;
@@ -550,7 +550,7 @@ public class MemberDAO {
 			st = con.createStatement();
 			rs = st.executeQuery(sql);
 			if(rs.next()) {
-				theaterTime ="상영날짜: "+rs.getString("moviedate").replace("00:00:00","")+"시간 :"+rs.getString("ontime");;
+				theaterTime ="상영날짜 : "+rs.getString("moviedate").replace("00:00:00","")+"시간 :"+rs.getString("ontime");;
 			}
 		}catch(Exception e) {
 			e.printStackTrace();

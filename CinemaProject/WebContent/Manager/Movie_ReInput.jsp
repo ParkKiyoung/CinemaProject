@@ -124,8 +124,7 @@ function CountChecked(field) {//체크박스 3개만 고르도록 하기
 			<tr>
 				<td><label>장르</label></td>
 				<td>
-				<input type = text id = interArr name = interArr value='${arr }'>
-
+				<input type = hidden id = interArr name = interArr value='${arr }'>
 					<table>
 					<tr>
 					<td width=120><input type="checkbox" name="M_Genre" value="스포츠" onclick="CountChecked(this)"> 스포츠 </td>
