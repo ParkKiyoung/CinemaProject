@@ -22,7 +22,6 @@
 	var scrollNum=1;
 	$(document).ready(function() {
 		MovieList(1);
-
 	})
 	function Onscreen() {//현재 상영작
 		scrollNum = 1;

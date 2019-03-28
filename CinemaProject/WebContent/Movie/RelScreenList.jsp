@@ -82,7 +82,6 @@ function movieView(num){
 		<c:forEach items="${movies }" var="mov">
 			<c:if test="${fn:substring(mov.rel_date, 0, 7)!=dateline }">
 				<c:set var="dateline" value="${fn:substring(mov.rel_date, 0, 7)}"></c:set>
-
 				<hr>
 				<h3 align="center">${fn:substring(mov.rel_date, 0, 4)}년
 					${fn:substring(mov.rel_date, 5, 7)}월 개봉예정작</h3>

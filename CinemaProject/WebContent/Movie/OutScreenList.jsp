@@ -103,10 +103,11 @@ function movieView(num){
 					</tr>
 					<tr>
 						<td>출연</td>
-						<td colspan="3">${fn:substring(mov.actor, 0, 30)}<c:if
-								test="${fn:length(mov.actor)>30 }">
+						<td colspan="3">${fn:substring(mov.actor, 0, 30)}
+						<c:if test="${fn:length(mov.actor)>30 }">
 							...
-							</c:if></td>
+						</c:if>
+						</td>
 					</tr>
 					<tr>
 						<td height="90px" valign="top">줄거리</td>

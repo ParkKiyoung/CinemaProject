@@ -229,11 +229,8 @@ public class MemberDAO {
 				bb.setSubject(rs.getString("subject"));
 				bb.setContent(rs.getString("content"));
 				bb.setCreated(rs.getString("created"));
-				bb.setGood(rs.getInt("good"));
-				bb.setBad(rs.getInt("bad"));
 				bb.setReadcount(rs.getInt("readcount"));
 				bb.setIp(rs.getString("ip"));
-				bb.setImg(rs.getString("img"));
 				bb.setCategory(rs.getString("category"));
 				arr.add(bb);
 			}
