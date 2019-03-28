@@ -110,8 +110,8 @@ public class ReservationDAO {
 			while(rs.next()) {
 				ReservationBean rb = new ReservationBean();
 				rb.setTheaterTimeNum(rs.getInt("theater_time_num"));
-				rb.setRoom_Name(rs.getString("ROOM_NAME"));//占쏢영곤옙 占싱몌옙
-				rb.setRoomNum(rs.getInt("ROOM_NUM"));//占쏢영곤옙 占쏙옙호
+				rb.setRoom_Name(rs.getString("ROOM_NAME"));
+				rb.setRoomNum(rs.getInt("ROOM_NUM"));
 				rb.setMovieSubject(rs.getString("subject"));
 				rb.setOnTime(rs.getString("ontime"));
 				rb.setMovieNum(rs.getInt("movie_num"));

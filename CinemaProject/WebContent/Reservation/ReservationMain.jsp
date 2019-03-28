@@ -93,7 +93,7 @@ body {
 					success : function(data) {
 						data = $.parseJSON(data);
 						var theaterList = "";
-						theaterList += "<select id ='theatername' name = 'theatername'>"
+						theaterList += "<select id ='theaternum' name = 'theaternum'>"
 						for (var i = 0; i < data.length; i++) {
 							theaterList += "<option value='"+data[i].theaternum+"'>"
 									+ data[i].theatername + "</option>";
@@ -108,10 +108,8 @@ body {
 	}
 
 	function MovieCall() {
-		var theater = document.getElementById("theatername").value;
-		var resDate = document.getElementById("resCalendar").value;
-		
-
+		var theater = document.getElementById("theaternum").value;//영화관번호
+		var resDate = document.getElementById("resCalendar").value;//날짜
 		$.ajax({//조건 영화 조회
 			type : "get",
 			url : "../Main/ResSearchMovieList",
@@ -137,7 +135,9 @@ body {
 				MovieSearchList += "<td>상영시간</td>"
 				for (var i = 0; i < data.length; i++) {
 					Title = data[i].subject;
-					MovieSearchList += "<td><a href=javascript:RoomCall("+ data[i].movie_num + "," + data[i].room_num + ","	+ data[i].theater_time_num + ")>"+data[i].ontime+ "</a></td>"
+					MovieSearchList += "<td><a href=javascript:RoomCall("+ 
+							data[i].movie_num + "," + data[i].room_num + ","	+ data[i].theater_time_num + ")>"+data[i].ontime+ "</a></td>"
+							
 					if (i + 1 < data.length) {
 						if (Title != data[i + 1].subject) {
 							MovieSearchList += "</tr>"
@@ -223,10 +223,12 @@ body {
 			                           } else {
 			                              for(var m=0 ; m < ResSeatSplit.length ; m++){
 			                                 if(ResSeatSplit[m]==(a+j).trim()){
-			                                    detailTable = "<td><div id='ck-button'><label><input type='checkbox' name=seatList value="+a+j+" onclick='seatReservation(this)' style='visibility: visible' disabled checked><span>"+a+j+"</span></label></div></td>";
+			                                    detailTable = "<td><div id='ck-button'><label><input type='checkbox' name=seatList value="+a+j+
+			                                    " onclick='seatReservation(this)' style='visibility: visible' disabled checked><span>"+a+j+"</span></label></div></td>";
 			                                    break;
 			                                 }else{
-			                                    detailTable = "<td><div id='ck-button'><label><input type='checkbox' name=seatList value="+a+j+" onclick='seatReservation(this)' style='visibility: visible'><span>"+a+j+"</span></label></div></td>";
+			                                    detailTable = "<td><div id='ck-button'><label><input type='checkbox' name=seatList value="+a+j+
+			                                    " onclick='seatReservation(this)' style='visibility: visible'><span>"+a+j+"</span></label></div></td>";
 			                                 }
 			                              }   
 			                           }
@@ -236,10 +238,12 @@ body {
 			                     }else{
 			                        for(var m=0 ; m < ResSeatSplit.length ; m++){
 			                           if(ResSeatSplit[m]==(a+j).trim()){
-			                              detailTable = "<td><div id='ck-button'><label><input type='checkbox' name=seatList value="+a+j+" onclick='seatReservation(this)' style='visibility: visible' disabled checked><span>"+a+j+"</span></label></div></td>";
+			                              detailTable = "<td><div id='ck-button'><label><input type='checkbox' name=seatList value="+a+j+
+			                              " onclick='seatReservation(this)' style='visibility: visible' disabled checked><span>"+a+j+"</span></label></div></td>";
 			                              break;
 			                           }else{
-			                              detailTable = "<td><div id='ck-button'><label><input type='checkbox' name=seatList value="+a+j+" onclick='seatReservation(this)' style='visibility: visible'><span>"+a+j+"</span></label></div></td>";
+			                              detailTable = "<td><div id='ck-button'><label><input type='checkbox' name=seatList value="+a+j+
+			                              " onclick='seatReservation(this)' style='visibility: visible'><span>"+a+j+"</span></label></div></td>";
 			                           }
 			                        }
 			                     }
